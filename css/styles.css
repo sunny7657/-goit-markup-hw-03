@@ -50,7 +50,7 @@ body {
 }
 
 .container {
-  width: 1188px;
+  width: 1158px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -71,6 +71,10 @@ body {
   padding: 16px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 
 .modal-btn:hover,
@@ -83,11 +87,13 @@ body {
   color: var(--primary-brand-color);
   border: 1px solid var(--accent-light-color);
   box-shadow: none;
+  min-width: 69px;
 }
 .modal-btn-light:hover,
 .modal-btn-light:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  border: 1px solid transparent;
 }
 
 .title {
@@ -134,8 +140,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .page-nav {
@@ -146,6 +150,8 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .contact-list {
@@ -215,12 +221,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
 
 .hero {
   background-color: var(--text-main-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .main-title {
@@ -233,6 +239,7 @@ body {
   text-align: center;
   color: var(--primary-white-color);
 
+  max-width: 496px;
   margin-bottom: 48px;
 }
 
@@ -242,12 +249,16 @@ body {
 
 .features {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .features-list {
   display: flex;
   gap: 24px;
-  padding-bottom: none;
+}
+
+.features-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 /* ==================== /FEATURES ==================== */
@@ -268,6 +279,10 @@ body {
   gap: 24px;
 }
 
+.about-item {
+  flex-basis: calc((100% - 3 * 16px) / 3))
+}
+
 /* ==================== /ABOUT ==================== */
 
 /* ==================== OUR TEAM ==================== */
@@ -285,6 +300,7 @@ body {
 .team-item {
   background-color: var(--primary-white-color);
   width: calc((100% - 72px) / 4);
+  
 }
 
 .team-card-wrapper {
@@ -298,15 +314,19 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-card-text {
+  padding: 32px 16px;
+}
+
 .team-subtitle {
-  margin-top: 32px;
-  margin-bottom: 8px;
+ text-align: center;
+ margin-bottom: 8px;
 }
 
 .team-desc {
   text-align: center;
-  margin-bottom: 32px;
 }
+
 /* ==================== OUR TEAM ==================== */
 
 /* ==================== FOOTER ==================== */
@@ -323,8 +343,13 @@ body {
 
 .desc-light {
   color: var(--secondary-white-color);
-  margin-top: 16px;
 }
+
+.logo-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 /* ==================== /FOOTER ==================== */
 
 /* ==================== SERVICES ==================== */
@@ -337,7 +362,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .apps-list {
@@ -345,9 +370,11 @@ body {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+  margin-bottom: 72px;
 }
 
 .apps-item {
+  width: calc((100% - 48px) / 3);
 }
 
 .apps-desc {
@@ -362,9 +389,7 @@ body {
   border: 1px solid var(--accent-light-color);
   border-top: none;
 
-  padding-top: 32px;
-  padding-left: 16px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
 }
 
 /* ==================== /SERVICES ==================== */
