@@ -61,6 +61,20 @@ body {
 
 /* ==================== COMPONENTS ==================== */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .modal-btn {
   font-weight: 500;
   font-size: 16px;
@@ -240,7 +254,6 @@ body {
   line-height: 1.07;
   letter-spacing: 0.02em;
   width: 496px;
-  height: 120px;
   text-align: center;
   color: var(--primary-white-color);
 
@@ -251,6 +264,7 @@ body {
 /* ==================== /HERO ==================== */
 
 /* ==================== FEATURES ==================== */
+
 
 .features {
   padding-top: 120px;
@@ -324,7 +338,7 @@ body {
 
 .team-subtitle {
  text-align: center;
- margin-bottom: 8px;
+ 
 }
 
 .team-desc {
@@ -352,6 +366,7 @@ body {
 .logo-link {
   display: inline-block;
   margin-bottom: 16px;
+  margin-right: 0;
 }
 
 /* ==================== /FOOTER ==================== */
@@ -374,7 +389,6 @@ body {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
-  margin-bottom: 72px;
 }
 
 .apps-item {
@@ -383,16 +397,12 @@ body {
 
 .apps-desc {
   color: var(--body-main-color);
-  margin-bottom: 8px;
+  width: auto;
 }
 
 .apps-text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border: 1px solid var(--accent-light-color);
   border-top: none;
-
   padding: 32px 16px;
 }
 
